@@ -7,7 +7,7 @@
   <body>
     <section>
       <label for="todo">Enter Task</label>
-      <input type="text" id="todo" value="changeme" size="40">
+      <input type="text" id="#todo" value="changeme" size="40">
       <select id="priority">
         <option>High</option>
         <option>Medium</option>
@@ -15,12 +15,19 @@
       </select>
       <button onclick="post();">New</button>
 
-      <script>
-        changeColor = post() {
-        
-          
-        }
       </script>
     </section>
+  <section>
+    <script>
+        post = function() {
+        var Lis = document.createElement("li");
+        <input type="checkbox" id="#box" name="group1" value="done">;
+        var written= document.querySelector('todo');
+        var chose= document.querySelector('box');
+        var node = document.createTextNode(written);
+        Lis.appendChild(chose);
+        Lis.appendChild(node);
+        }
+  </section>
   </body>
 </html>
