@@ -17,17 +17,18 @@
 
       </script>
     </section>
-  <section>
+  <section id="#section2">
     <script>
         post = function() {
         var Lis = document.createElement("li");
         <input type="checkbox" id="#box" name="group1" value="done">;
         var written= document.querySelector('todo');
         var chose= document.querySelector('box');
-        var node = document.createTextNode(written);
+        var node = document.createTextNode("written");
         Lis.appendChild(chose);
         Lis.appendChild(node);
-        
+        var element= document.querySelector('section2');
+        section2.appendChild(Lis);
         }
     </script>    
   </section>
