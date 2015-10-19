@@ -1,35 +1,54 @@
 <html>
-  <header>
+<head>
+    <style>
+        .High {
+            color: red;
+            font-size: 28pt;
+        }
+        .Medium {
+            color: yellow;
+            font-size: 28pt;
+        }
+        .Low {
+            color: black;
+            font-size: 28pt;
+        }
+    </style>
+</head>
+<header>
     <center>
-    <h1>Busy Busy</h1>
+        <h1>Busy Busy</h1>
     </center>
-  </header>
- <body>
-    <section>
-      <label for="todo">Enter Task</label>
-      <input type="text" id="todo" value="changeme" size="40">
-      <select id="priority">
+</header>
+<body>
+<section>
+    <label for="todo">Enter Task</label>
+    <input type="text" id="todo" value="changeme" size="40">
+    <select id="priority">
         <option>High</option>
         <option>Medium</option>
-        <option>low</option>
-      </select>
-      <button onclick="post();">New</button>
-      </script>
-    </section>
-    <ul id="section2">My Task List</ul>
-    <script>
-        function post() {
-          var Lis = document.createElement("li");
-          var whattodo=document.querySelector('#todo').value
-          var node = document.createTextNode(whattodo);
-          var whetherdone=document.createElement("input");
-          whetherdone.type="checkbox";
-          Lis.appendChild(whetherdone);
-          Lis.appendChild(node);
-          var element= document.querySelector('section2');
-          section2.appendChild(Lis);
-        }
-    </script>    
-  </section>
-  </body>
+        <option>Low</option>
+    </select>
+    <button onclick="post();">New</button>
+</section>
+<ul id="section2">My Task List</ul>
+<script>
+    function post() {
+        var Lis = document.createElement("li");
+        var whattodo=document.querySelector('#todo').value
+        var node = document.createTextNode(whattodo);
+
+        myPriority=document.querySelector('#priority');
+        Lis.className =  myPriority.value;
+
+        var whetherdone=document.createElement("input");
+        whetherdone.type="checkbox";
+        Lis.appendChild(whetherdone);
+        Lis.appendChild(node);
+        var element= document.querySelector('section2');
+        section2.appendChild(Lis);
+    }
+</script>
+</section>
+</body>
 </html>
