@@ -4,31 +4,30 @@
     <h1>Busy Busy</h1>
     </center>
   </header>
-  <body>
+ <body>
     <section>
       <label for="todo">Enter Task</label>
-      <input type="text" id="#todo" value="changeme" size="40">
+      <input type="text" id="todo" value="changeme" size="40">
       <select id="priority">
         <option>High</option>
         <option>Medium</option>
         <option>low</option>
       </select>
       <button onclick="post();">New</button>
-
       </script>
     </section>
-  <section id="#section2">
+    <ul id="section2">My Task List</ul>
     <script>
-        post = function() {
-        var Lis = document.createElement("li");
-        <input type="checkbox" id="#box" name="group1" value="done">;
-        var written= document.querySelector('todo');
-        var chose= document.querySelector('box');
-        var node = document.createTextNode("written");
-        Lis.appendChild(chose);
-        Lis.appendChild(node);
-        var element= document.querySelector('section2');
-        section2.appendChild(Lis);
+        function post() {
+          var Lis = document.createElement("li");
+          var whattodo=document.querySelector('#todo').value
+          var node = document.createTextNode(whattodo);
+          var whetherdone=document.createElement("input");
+          whetherdone.type="checkbox";
+          Lis.appendChild(whetherdone);
+          Lis.appendChild(node);
+          var element= document.querySelector('section2');
+          section2.appendChild(Lis);
         }
     </script>    
   </section>
