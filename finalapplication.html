@@ -13,6 +13,12 @@
             color: black;
             font-size: 28pt;
         }
+         #section2 {
+             background-color: lightblue;
+             height: 200%;
+             width: 100%;
+
+         }
     </style>
 </head>
 <header>
@@ -31,7 +37,7 @@
     </select>
     <button onclick="post();">New</button>
 </section>
-<ul id="section2">My Task List</ul>
+<ul id="section2"><center><h3>My Task List</h3></center></ul>
 <script>
     function post() {
         var Lis = document.createElement("li");
@@ -43,10 +49,16 @@
 
         var whetherdone=document.createElement("input");
         whetherdone.type="checkbox";
+
+        whetherdone.onclick=boxchecked;
+
         Lis.appendChild(node);
         Lis.appendChild(whetherdone);
         var element= document.querySelector('section2');
         section2.appendChild(Lis);
+    }
+    function boxchecked(){
+        this.parentNode.classList.add("done");
     }
 </script>
 </section>
