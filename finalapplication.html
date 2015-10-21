@@ -54,19 +54,17 @@
         var whetherdone=document.createElement("input");
         whetherdone.type="checkbox";
 
-        whetherdone.onclick=boxchecked;
+        whetherdone.onclick=doneTask;
 
         Lis.appendChild(node);
         Lis.appendChild(whetherdone);
         var element= document.querySelector('section2');
         section2.appendChild(Lis);
     }
-    function boxchecked(){
-        this.parentNode.classList.add("done");
-    }
+    
 </script>
 <script>
-    done Task = function(){
+    doneTask = function(){
         if (this.checked){
             this.parentNode.classList.add("done");
         } else{
