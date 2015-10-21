@@ -17,8 +17,12 @@
              background-color: lightblue;
              height: 200%;
              width: 100%;
-
          }
+        #done {
+            <script typ="text/javascript" src="http://bnmetp.github.io/CS130/listsaver.js"></script>
+            localSave(section2)
+            restoreList(section2, doneTask)
+        }
     </style>
 </head>
 <header>
@@ -61,6 +65,19 @@
         this.parentNode.classList.add("done");
     }
 </script>
-</section>
+<script>
+    done Task = function(){
+        if (this.checked){
+            this.parentNode.classList.add("done");
+        } else{
+            this.parentNode.classList.remove("done");
+        }
+    }
+</script>
+
+
 </body>
+<script type="text/javascript">
+    window.onload = function() {retoreList ("tasklist", doneTask) }
+</script>
 </html>
