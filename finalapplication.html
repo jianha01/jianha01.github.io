@@ -18,7 +18,9 @@
              height: 200%;
              width: 100%;
          }
-       
+        .done {
+            localSave(section2);
+        }
     </style>
 </head>
 <header>
@@ -57,7 +59,7 @@ localSave(section2);
         Lis.appendChild(whetherdone);
         var element= document.querySelector('section2');
         section2.appendChild(Lis);
-        
+        localSave(section2);
     }
     
 </script>
@@ -66,10 +68,8 @@ localSave(section2);
     doneTask = function(){
         if (this.checked){
             this.parentNode.classList.add("done");
-            localSave(section2);
         } else{
             this.parentNode.classList.remove("done");
-            localSave(section2);
         }
     }
 </script>
