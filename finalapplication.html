@@ -38,7 +38,7 @@
         <option>Low</option>
     </select>
     <button onclick="post();">New</button>
-    localSave(section2);
+    localSave("section2");
 </section>
 <ul id="section2"><center><h3>My Task List</h3></center></ul>
 localSave(section2);
@@ -60,7 +60,7 @@ localSave(section2);
         Lis.appendChild(whetherdone);
         var element= document.querySelector('section2');
         section2.appendChild(Lis);
-        localSave(section2);
+        localSave("section2");
     }
     
 </script>
