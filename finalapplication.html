@@ -66,8 +66,10 @@
     doneTask = function(){
         if (this.checked){
             this.parentNode.classList.add("done");
+            localSave("section2");
         } else{
             this.parentNode.classList.remove("done");
+            localSave("section2");
         }
     }
     localSave("section2");
