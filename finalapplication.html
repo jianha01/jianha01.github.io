@@ -18,9 +18,7 @@
              height: 200%;
              width: 100%;
          }
-        .done {
-            localSave(section2);
-        }
+        
     </style>
 </head>
 <header>
@@ -40,7 +38,7 @@
     <button onclick="post();">New</button>
 </section>
 <ul id="section2"><center><h3>My Task List</h3></center></ul>
-localSave(section2);
+
 <script>
     function post() {
         var Lis = document.createElement("li");
@@ -72,6 +70,7 @@ localSave(section2);
             this.parentNode.classList.remove("done");
         }
     }
+    localSave("section2");
 </script>
 
 
